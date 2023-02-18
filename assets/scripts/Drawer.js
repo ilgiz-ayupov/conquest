@@ -1,6 +1,11 @@
 class Drawer {
-  constructor({ overlay, drawer, btnOpen, btnClose }) {
-    this.$overlay = $(overlay);
+  /**
+   * 
+   * @param {Overlay} overlay 
+   * @param {{drawer: string, btnOpen: string, btnClose: string}} options 
+   */
+  constructor(overlay, { drawer, btnOpen, btnClose }) {
+    this.overlay = overlay;
     this.$drawer = $(drawer);
     this.$btnOpen = $(btnOpen);
     this.$btnClose = $(btnClose);
@@ -10,13 +15,13 @@ class Drawer {
   }
 
   open() {
-    this.$overlay.data.show = true;
+    this.overlay.show();
     this.$drawer.data.show = true;
     $("body").data.block = true;
   }
 
   close() {
-    this.$overlay.data.show = false;
+    this.overlay.hide();
     this.$drawer.data.show = false;
     $("body").data.block = false;
   }

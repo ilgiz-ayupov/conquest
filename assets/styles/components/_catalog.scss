@@ -1,6 +1,10 @@
 .catalog {
   margin-bottom: 5rem;
 
+  @media (max-width: 992px) {
+    margin-bottom: 3rem;
+  }
+
   &__row {
     display: flex;
     flex-wrap: wrap;
@@ -96,7 +100,6 @@
     span {
       font-family: var(--prata);
       font-size: var(--text-xm);
-      color: var(--black-900);
       opacity: 80%;
     }
   }
@@ -156,10 +159,11 @@
   &__lines {
     pointer-events: none;
     position: absolute;
-    top: 0;
+    top: 50%;
     bottom: 0;
     right: 0;
     max-width: 100%;
+    transform: translateY(-50%);
 
     @media (max-width: 576px) {
       display: none;

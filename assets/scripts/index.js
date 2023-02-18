@@ -1,5 +1,8 @@
-const drawer = new Drawer({
-  overlay: "#overlay",
+const overlay = new Overlay({
+  overlay: "#overlay"
+});
+
+const drawer = new Drawer(overlay, {
   drawer: "#drawer",
   btnOpen: "#btn-drawer-open",
   btnClose: "#btn-drawer-close",

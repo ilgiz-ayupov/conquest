@@ -1,13 +1,9 @@
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  color: var(--black-300);
   padding: 1.875rem 0;
   background: var(--beige-100);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-
-  color: var(--black-300);
+  margin-bottom: 2rem;
 }
 
 .header-nav {
@@ -18,9 +14,7 @@ header {
   &__logo {
     display: flex;
     align-items: center;
-
     font-family: var(--playfair);
-    font-weight: 400;
     font-size: var(--text-xs);
 
     span {
@@ -31,10 +25,8 @@ header {
   &__menu {
     display: flex;
     align-items: center;
-    gap: 4rem 2rem;
-
+    gap: 0 2rem;
     font-family: var(--roboto);
-    font-weight: 400;
     font-size: var(--text-sm);
 
     @media (max-width: 768px) {
@@ -45,9 +37,9 @@ header {
   &__actions {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 0 1.25rem;
 
-    & .drawer-btn {
+    .drawer-btn {
       @media (min-width: 768px) {
         display: none;
       }
