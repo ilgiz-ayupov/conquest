@@ -1,0 +1,46 @@
+@import "./assets/styles/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--text-base);
+  line-height: 1;
+  color: var(--black-900);
+  height: 100%;
+
+  &[data-block="true"] {
+    overflow: hidden;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 73.75rem; // 1180px
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+// Utilities
+@import "./assets/styles/common";
+@import "./assets/styles/mixins";
+
+// Components
+@import "./assets/styles/components/headers";
+@import "./assets/styles/components/hero-section";
+@import "./assets/styles/components/popular";
+@import "./assets/styles/components/catalog";
+@import "./assets/styles/components/news";
+@import "./assets/styles/components/footer";

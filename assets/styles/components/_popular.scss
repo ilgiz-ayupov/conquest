@@ -1,0 +1,126 @@
+.popular {
+  --products-gap: 2rem;
+
+  margin-bottom: 7.8125rem;
+
+  @media (max-width: 768px) {
+    --products-gap: 1rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--products-gap);
+  }
+
+  &__product {
+    max-width: 23.125rem;
+    width: calc(100% / 3 - var(--products-gap));
+
+    @media (max-width: 1024px) {
+      width: calc(100% / 2 - var(--products-gap));
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+  }
+}
+
+.popular-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.25rem;
+
+  &__title {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__more {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-25%);
+    font-family: var(--roboto);
+    font-weight: 500;
+    color: var(--text-600);
+
+    padding: 0.25rem 0;
+    border: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid #c4c0b6;
+    }
+
+    @media (max-width: 768px) {
+      top: 100%;
+      right: 50%;
+      transform: translate(50%, 50%);
+    }
+  }
+}
+
+.popular-product {
+  padding: 2.5rem 1.875rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  &__name {
+    display: inline-block;
+    font-family: var(--playfair);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    color: var(--black-900);
+    opacity: 80%;
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+
+    span {
+      display: inline-block;
+      font-family: var(--prata);
+      font-size: var(--text-sm);
+      color: var(--black-900);
+      opacity: 80%;
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__image {
+    position: relative;
+    background: var(--white);
+    margin-bottom: 1.25rem;
+
+    img {
+      max-width: 100%;
+    }
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__more {
+    --more-before-width: 2rem;
+
+    position: relative;
+    font-family: var(--playfair);
+    color: var(--black-900);
+    padding-left: calc(var(--more-before-width) + 0.5rem);
+
+    @include line(var(--more-before-width));
+  }
+}

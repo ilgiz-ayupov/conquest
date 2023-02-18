@@ -1,0 +1,13 @@
+@mixin line($width) {
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: $width;
+    background: #8b8371;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
