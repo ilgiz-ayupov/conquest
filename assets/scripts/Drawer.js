@@ -25,4 +25,8 @@ class Drawer {
     this.$drawer.data.show = false;
     $("body").data.block = false;
   }
+
+  get isOpen() {
+    return this.$drawer.data.show;
+  }
 }

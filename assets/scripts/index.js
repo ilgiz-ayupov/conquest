@@ -1,5 +1,5 @@
 const overlay = new Overlay({
-  overlay: "#overlay"
+  overlay: "#overlay",
 });
 
 const drawer = new Drawer(overlay, {
@@ -10,7 +10,7 @@ const drawer = new Drawer(overlay, {
 
 $(document).on("click", (event) => {
   const $target = $(event.target);
-  if (drawer.$drawer.data.show && !$target.isEqual(drawer.$btnOpen)) {
+  if (drawer.isOpen && $target.isEqual(overlay.$overlay)) {
     drawer.close();
   }
 });
